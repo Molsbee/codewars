@@ -14,10 +14,9 @@ func DigPow(n, p int) int {
 		total += int(math.Pow(float64(digit), float64(p+i)))
 	}
 
-	var k int = total / n
-	if k == 0 {
+	if total%n != 0 {
 		return -1
 	}
 
-	return k
+	return total / n
 }

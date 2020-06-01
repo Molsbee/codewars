@@ -16,11 +16,12 @@ func Test(t *testing.T) {
 	AssertEqual(t, 51, a)
 
 	a = DigPow(46288, 5)
-	AssertEqual(t, 3263, a)
+	AssertEqual(t, -1, a)
 }
 
 func AssertEqual(t *testing.T, expected, actual int) {
 	if expected != actual {
 		t.Errorf("expected: %d actual: %d", expected, actual)
+		t.Fail()
 	}
 }
